@@ -1,2 +1,5 @@
-dramatiq[redis]
+async-dramatiq
+redis
 fastapi[standard]
+
+aiohttp
