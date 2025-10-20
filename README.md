@@ -20,7 +20,9 @@ From either requirements_frozen.txt or requirements.txt.
     ```bash
     dramatiq endpoint --queues high_priority low_priority --processes 1 --threads 1
     ```
-    Here by setting processes and threads both to 1, we can ensure that only one task will be run at a time (for demonstration purposes)
+    Here by setting processes and threads both to 1, we can ensure that only one task will be run at a time (for demonstration purposes).
+
+    The 2nd argument tells dramatiq where to find the dramatiq decorated functions. In our case since it is found at endpoint.py, the argument is 'endpoint'.  If instead it was found in src/tasks.py, we must put 'src.tasks'.
 
 # Demo
 Call the 2 endpoints provided. One will run a low priority task, the other will run a high priority task.
@@ -32,4 +34,5 @@ The dramatiq worker will prioritze the high_priority queue. U can see this by sp
 # How it works
 U can run the demo without the dramatiq worker. What will happen is, when the endpoints are called, messages are sent to the redis message queues. The dramatiq worker needs to be running to execute the jobs in the queues.
     
+
 
