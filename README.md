@@ -1,6 +1,9 @@
 # Intro
 This is a demo showing how `dramatiq` and `redis` can be used to perform CPU intensive tasks that should be run in the background in a `FastAPI` server.
 
+## Demo variants
+**Check the branches** for implementation variants.
+
 # Setup
 ## 1. Install packages
 From either requirements_frozen.txt or requirements.txt.
